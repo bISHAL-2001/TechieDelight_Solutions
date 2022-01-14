@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void print(int *arr, int l, int u)
-{
-    for(int i = l; i<=u; i++)
-        printf("%d ", arr[i]);
-}
-
 void check(int *arr, int size) {
     int u, l;
     for (int i = 0; i < size;) {
@@ -24,10 +18,8 @@ void check(int *arr, int size) {
         }
         i++;
     }
-    if(u-l != 0) {
-        printf("The SubArray with maximum length with equal number of zeroes and ones = %d,\nSubarray is/are :->", u+1 - l);
-        print(arr, l, u);
-    }
+    if(u-l != 0)
+        printf("The SubArray with maximum length with equal number of zeroes and ones = %d.", u+1 - l);
 }
 
 int main(void)
